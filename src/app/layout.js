@@ -1,6 +1,7 @@
 import './globals.css'
 import { cx } from '../utils/index.js';
 import { Inter, Manrope } from 'next/font/google'
+import Header from '../components/Header/index.js';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +29,9 @@ export default function RootLayout({ children }) {
           manrope.variable,
           "font-mr bg-light dark:bg-dark"
         )}
-           >{children}</body>
+           >
+        <Header />
+           {children}</body>
     </html>
   )
 }
